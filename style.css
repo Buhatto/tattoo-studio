@@ -76,7 +76,7 @@ h2 {
   text-align: center;
   background:
     linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(photo_2026-05-03_02-11-39.jpg) no-repeat center/cover;
+    url(img/photo_2026-05-03_02-11-39.jpg) no-repeat center/cover;
 }
 
 .hero h1 {
