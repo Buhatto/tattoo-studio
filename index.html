@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Студия профессиональной татуировки" />
+    <meta
+      property="og:description"
+      content="Запись на сеанс, портфолио мастеров и обучение."
+    />
+    <meta property="og:image" content="ссылка_на_красивое_фото.jpg" />
+    <title>Tattoo Studio | Искусство и Стиль</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">TATTOO.STUDIO</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#about">О студии</a></li>
+          <li><a href="#masters">Мастера</a></li>
+          <li><a href="#healed">Портфолио</a></li>
+          <li><a href="#booking" class="btn-outline">Записаться</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>
+          Искусство, которое <br />
+          останется с вами
+        </h1>
+        <p>
+          Профессиональная татуировка, пирсинг и обучение в атмосфере полного
+          доверия.
+        </p>
+        <a href="#booking" class="btn-main">Забронировать сеанс</a>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container">
+        <h2>Стандарты качества</h2>
+        <div class="features">
+          <div class="feature-item">
+            <h3>Стерильность</h3>
+            <p>
+              Трехэтапная обработка инструментов и одноразовые расходные
+              материалы.
+            </p>
+          </div>
+          <div class="feature-item">
+            <h3>Мастерство</h3>
+            <p>Команда художников с уникальным почерком в разных стилях.</p>
+          </div>
+          <div class="feature-item">
+            <h3>Эстетика</h3>
+            <p>
+              Помогаем доработать идею так, чтобы она идеально легла по анатомии
+              тела.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="masters" class="masters">
+      <div class="container">
+        <h2>Наши мастера</h2>
+        <div class="master-grid">
+          <!-- Мастер 1 -->
+          <div class="master-card">
+            <div
+              class="master-photo"
+              style="background-image: url(./img/Misha-1-1.jpg)"
+            ></div>
+            <div class="master-info">
+              <h3>Александр Райт</h3>
+              <p>Cyber Sigilismy</p>
+            </div>
+          </div>
+          <div class="master-card">
+            <div
+              class="master-photo"
+              style="background-image: url(./img/original_photo-thumb_1920.jpg)"
+            ></div>
+            <div class="master-info">
+              <h3>Мария Блэк</h3>
+              <p>Dark Surrealism</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="booking" class="booking">
+      <div class="container">
+        <h2>Запись на сеанс</h2>
+        <form id="booking-form" class="form-container">
+          <div class="input-group">
+            <input type="text" name="name" placeholder="Ваше имя" required />
+            <input type="tel" name="phone" placeholder="Телефон" required />
+          </div>
+          <select name="service">
+            <option value="tattoo">Татуировка</option>
+            <option value="piercing">Пирсинг</option>
+            <option value="education">Обучение</option>
+          </select>
+          <textarea
+            name="message"
+            placeholder="Опишите вашу идею..."
+          ></textarea>
+          <button type="submit" class="btn-main">Отправить заявку</button>
+        </form>
+        <div class="modal-window">.</div>
+      </div>
+    </section>
+    <section id="healed" class="healed">
+      <div class="container">
+        <div class="section-header">
+          <h2>Результаты</h2>
+          <p class="subtitle">Как татуировки выглядят после заживления</p>
+        </div>
+
+        <div class="healed-grid">
+          <div class="healed-item">
+            <div
+              class="healed-photo"
+              style="background-image: url(./img/photo_2026-05-03_02-13-39.jpg)"
+            ></div>
+            <div class="healed-info">
+              <h4>Cyber Sigilism, 6 месяцев спустя</h4>
+              <p>Мастер: Александр Райт</p>
+            </div>
+          </div>
+          <div class="healed-item">
+            <div
+              class="healed-photo"
+              style="background-image: url(./img/photo_2026-05-03_02-17-16.jpg)"
+            ></div>
+            <div class="healed-info">
+              <h4>Dark Surrealism, 1 год спустя</h4>
+              <p>Мастер: Мария Блэк</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <div class="logo">TATTOO.STUDIO</div>
+            <p>
+              Создаем искусство на коже с 2024 года. <br />
+              Соблюдаем медицинские стандарты безопасности.
+            </p>
+          </div>
+
+          <div class="footer-nav">
+            <h4>Навигация</h4>
+            <ul>
+              <li><a href="#about">О студии</a></li>
+              <li><a href="#masters">Мастера</a></li>
+              <li><a href="#healed">Стили</a></li>
+              <li><a href="#booking">Запись</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-contacts">
+            <h4>Контакты</h4>
+            <p>ул. Профессиональная, 12</p>
+            <p>+7 (999) 000-00-00</p>
+            <p>Ежедневно: 11:00 — 21:00</p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 Tattoo Studio. Все права защищены.</p>
+          <div class="socials">
+            <a href="#">VK</a>
+            <a href="#">TG</a>
+            <a href="#">INST</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="script.js"></script>
+</html>
