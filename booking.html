@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Запись на сеанс | Tattoo Studio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <a href="index.html" class="logo">TATTOO.STUDIO</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="about.html">О студии</a></li>
+          <li><a href="masters.html">Мастера</a></li>
+          <li><a href="portfolio.html">Портфолио</a></li>
+          <li><a href="prices.html">Стоимость</a></li>
+          <li><a href="training.html">Обучение</a></li>
+          <li><a href="booking.html" class="btn-outline active">Записаться</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="page-hero">
+      <div class="container">
+        <h1>Запись на сеанс</h1>
+        <p class="subtitle">Оставьте заявку — мы свяжемся в течение нескольких часов</p>
+      </div>
+    </section>
+
+    <section class="booking" style="padding-top: 1rem;">
+      <div class="container">
+        <form id="booking-form" class="form-container">
+          <div class="input-group">
+            <input type="text" name="name" placeholder="Ваше имя" required />
+            <input type="tel" name="phone" placeholder="Телефон" required />
+          </div>
+          <select name="master">
+            <option value="">Выберите мастера</option>
+            <option value="alexander">Александр Райт — Cyber Sigilism</option>
+            <option value="maria">Мария Блэк — Dark Surrealism</option>
+            <option value="any">Любой мастер</option>
+          </select>
+          <select name="service">
+            <option value="tattoo">Татуировка</option>
+            <option value="piercing">Пирсинг</option>
+            <option value="education">Обучение</option>
+            <option value="consultation">Консультация (бесплатно)</option>
+          </select>
+          <textarea
+            name="message"
+            placeholder="Опишите вашу идею, размер, место на теле..."
+          ></textarea>
+          <button type="submit" class="btn-main">Отправить заявку</button>
+        </form>
+        <div class="modal-window">.</div>
+      </div>
+    </section>
+
+    <section style="padding: 3rem 0 5rem;">
+      <div class="container">
+        <div class="features" style="max-width: 900px; margin: 0 auto;">
+          <div class="feature-item" style="text-align: center;">
+            <h3>📍 Адрес</h3>
+            <p>ул. Профессиональная, 12</p>
+          </div>
+          <div class="feature-item" style="text-align: center;">
+            <h3>🕐 Режим работы</h3>
+            <p>Ежедневно: 11:00 — 21:00</p>
+          </div>
+          <div class="feature-item" style="text-align: center;">
+            <h3>📞 Телефон</h3>
+            <p>+7 (999) 000-00-00</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <div class="logo">TATTOO.STUDIO</div>
+            <p>
+              Создаем искусство на коже с 2024 года. <br />
+              Соблюдаем медицинские стандарты безопасности.
+            </p>
+          </div>
+          <div class="footer-nav">
+            <h4>Навигация</h4>
+            <ul>
+              <li><a href="about.html">О студии</a></li>
+              <li><a href="masters.html">Мастера</a></li>
+              <li><a href="portfolio.html">Портфолио</a></li>
+              <li><a href="prices.html">Стоимость</a></li>
+              <li><a href="training.html">Обучение</a></li>
+              <li><a href="booking.html">Запись</a></li>
+            </ul>
+          </div>
+          <div class="footer-contacts">
+            <h4>Контакты</h4>
+            <p>ул. Профессиональная, 12</p>
+            <p>+7 (999) 000-00-00</p>
+            <p>Ежедневно: 11:00 — 21:00</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Tattoo Studio. Все права защищены.</p>
+          <div class="socials">
+            <a href="#">VK</a>
+            <a href="#">TG</a>
+            <a href="#">INST</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

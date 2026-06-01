@@ -3,10 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:title" content="Студия профессиональной татуировки" />
-    <meta property="og:description" content="Запись на сеанс, портфолио мастеров и обучение." />
-    <meta property="og:image" content="ссылка_на_красивое_фото.jpg" />
-    <title>Tattoo Studio | Искусство и Стиль</title>
+    <title>О студии | Tattoo Studio</title>
     <link rel="stylesheet" href="style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap"
@@ -15,10 +12,10 @@
   </head>
   <body>
     <header class="navbar">
-      <div class="logo">TATTOO.STUDIO</div>
+      <a href="index.html" class="logo">TATTOO.STUDIO</a>
       <nav>
         <ul class="nav-links">
-          <li><a href="about.html">О студии</a></li>
+          <li><a href="about.html" class="active">О студии</a></li>
           <li><a href="masters.html">Мастера</a></li>
           <li><a href="portfolio.html">Портфолио</a></li>
           <li><a href="prices.html">Стоимость</a></li>
@@ -28,17 +25,10 @@
       </nav>
     </header>
 
-    <section class="hero">
-      <div class="hero-content">
-        <h1>
-          Искусство, которое <br />
-          останется с вами
-        </h1>
-        <p>
-          Профессиональная татуировка, пирсинг и обучение в атмосфере полного
-          доверия.
-        </p>
-        <a href="booking.html" class="btn-main">Забронировать сеанс</a>
+    <section class="page-hero">
+      <div class="container">
+        <h1>О студии</h1>
+        <p class="subtitle">Место, где рождается искусство на коже</p>
       </div>
     </section>
 
@@ -50,88 +40,71 @@
             <h3>Стерильность</h3>
             <p>
               Трехэтапная обработка инструментов и одноразовые расходные
-              материалы.
+              материалы. Мы следуем строгим медицинским протоколам, чтобы ваша
+              безопасность была гарантирована на каждом этапе.
             </p>
           </div>
           <div class="feature-item">
             <h3>Мастерство</h3>
-            <p>Команда художников с уникальным почерком в разных стилях.</p>
+            <p>
+              Команда художников с уникальным почерком в разных стилях. Каждый
+              мастер прошёл профессиональное обучение и постоянно совершенствует
+              своё искусство.
+            </p>
           </div>
           <div class="feature-item">
             <h3>Эстетика</h3>
             <p>
               Помогаем доработать идею так, чтобы она идеально легла по анатомии
-              тела.
+              тела. Мы не просто наносим рисунок — мы создаём произведение
+              искусства, которое будет с вами всю жизнь.
             </p>
           </div>
         </div>
-        <div style="text-align:center; margin-top: 2rem;">
-          <a href="about.html" class="btn-main">Подробнее о студии</a>
+      </div>
+    </section>
+
+    <section class="about-story" style="background: var(--bg-section, #0f0f0f); padding: 5rem 0;">
+      <div class="container">
+        <h2>Наша история</h2>
+        <div class="about-text" style="max-width: 700px; margin: 2rem auto 0; text-align: center; line-height: 1.8; opacity: 0.85;">
+          <p>
+            Tattoo Studio была основана в 2024 году группой единомышленников,
+            объединённых одной страстью — создавать искусство, которое остаётся
+            с человеком навсегда.
+          </p>
+          <br />
+          <p>
+            Мы верим, что татуировка — это не просто украшение, а способ
+            самовыражения, часть личной истории. Именно поэтому к каждому клиенту
+            мы подходим индивидуально, вникая в суть его идеи и помогая воплотить
+            её наилучшим образом.
+          </p>
+          <br />
+          <p>
+            За время работы мы создали сотни уникальных татуировок и гордимся
+            каждой из них.
+          </p>
         </div>
       </div>
     </section>
 
-    <section class="masters">
+    <section style="padding: 5rem 0; text-align: center;">
       <div class="container">
-        <h2>Наши мастера</h2>
-        <div class="master-grid">
-          <div class="master-card">
-            <div
-              class="master-photo"
-              style="background-image: url(./img/Misha-1-1.jpg)"
-            ></div>
-            <div class="master-info">
-              <h3>Александр Райт</h3>
-              <p>Cyber Sigilismy</p>
-            </div>
+        <h2>Наши показатели</h2>
+        <div class="features" style="margin-top: 2rem;">
+          <div class="feature-item">
+            <h3 style="font-size: 2.5rem;">200+</h3>
+            <p>Выполненных работ</p>
           </div>
-          <div class="master-card">
-            <div
-              class="master-photo"
-              style="background-image: url(./img/original_photo-thumb_1920.jpg)"
-            ></div>
-            <div class="master-info">
-              <h3>Мария Блэк</h3>
-              <p>Dark Surrealism</p>
-            </div>
+          <div class="feature-item">
+            <h3 style="font-size: 2.5rem;">2</h3>
+            <p>Мастера с уникальным стилем</p>
           </div>
-        </div>
-        <div style="text-align:center; margin-top: 2rem;">
-          <a href="masters.html" class="btn-main">Все мастера</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="healed">
-      <div class="container">
-        <div class="section-header">
-          <h2>Результаты</h2>
-          <p class="subtitle">Как татуировки выглядят после заживления</p>
-        </div>
-        <div class="healed-grid">
-          <div class="healed-item">
-            <div
-              class="healed-photo"
-              style="background-image: url(./img/photo_2026-05-03_02-13-39.jpg)"
-            ></div>
-            <div class="healed-info">
-              <h4>Cyber Sigilism, 6 месяцев спустя</h4>
-              <p>Мастер: Александр Райт</p>
-            </div>
+          <div class="feature-item">
+            <h3 style="font-size: 2.5rem;">100%</h3>
+            <p>Одноразовые расходники</p>
           </div>
-          <div class="healed-item">
-            <div
-              class="healed-photo"
-              style="background-image: url(./img/photo_2026-05-03_02-17-16.jpg)"
-            ></div>
-            <div class="healed-info">
-              <h4>Dark Surrealism, 1 год спустя</h4>
-              <p>Мастер: Мария Блэк</p>
-            </div>
-          </div>
-        </div>
-        <div style="text-align:center; margin-top: 2rem;">
-          <a href="portfolio.html" class="btn-main">Всё портфолио</a>
         </div>
       </div>
     </section>

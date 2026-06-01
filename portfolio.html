@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Портфолио | Tattoo Studio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <a href="index.html" class="logo">TATTOO.STUDIO</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="about.html">О студии</a></li>
+          <li><a href="masters.html">Мастера</a></li>
+          <li><a href="portfolio.html" class="active">Портфолио</a></li>
+          <li><a href="prices.html">Стоимость</a></li>
+          <li><a href="training.html">Обучение</a></li>
+          <li><a href="booking.html" class="btn-outline">Записаться</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="page-hero">
+      <div class="container">
+        <h1>Портфолио</h1>
+        <p class="subtitle">Наши работы — после заживления</p>
+      </div>
+    </section>
+
+    <!-- Фильтры по мастеру -->
+    <section style="padding: 2rem 0 0">
+      <div class="container" style="text-align: center">
+        <div
+          class="portfolio-filters"
+          style="
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+          "
+        >
+          <button class="filter-btn active" onclick="filterPortfolio('all')">
+            Все работы
+          </button>
+          <button class="filter-btn" onclick="filterPortfolio('alexander')">
+            Александр Райт
+          </button>
+          <button class="filter-btn" onclick="filterPortfolio('maria')">
+            Мария Блэк
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="healed" style="padding-top: 2rem">
+      <div class="container">
+        <div class="healed-grid" id="portfolio-grid">
+          <div class="healed-item" data-master="alexander">
+            <div
+              class="healed-photo"
+              style="background-image: url(./img/photo_2026-05-03_02-13-39.jpg)"
+            ></div>
+            <div class="healed-info">
+              <h4>Cyber Sigilism, 6 месяцев спустя</h4>
+              <p>Мастер: Александр Райт</p>
+            </div>
+          </div>
+
+          <div class="healed-item" data-master="maria">
+            <div
+              class="healed-photo"
+              style="background-image: url(./img/photo_2026-05-03_02-17-16.jpg)"
+            ></div>
+            <div class="healed-info">
+              <h4>Dark Surrealism, 1 год спустя</h4>
+              <p>Мастер: Мария Блэк</p>
+            </div>
+          </div>
+
+          <!-- Дополнительные карточки для будущих работ -->
+          <div class="healed-item" data-master="alexander">
+            <div
+              class="healed-photo"
+              style="background-image: url(./img/Cyber\ Sigilism\ —\ рука.jpg)"
+            ></div>
+            <div class="healed-info">
+              <h4>Cyber Sigilism — рука</h4>
+              <p>Мастер: Александр Райт</p>
+            </div>
+          </div>
+
+          <div class="healed-item" data-master="maria">
+            <div
+              class="healed-photo"
+              style="
+                background-image: url(./img/Dark\ Surrealism\ —\ спина.jpg);
+              "
+            ></div>
+            <div class="healed-info">
+              <h4>Dark Surrealism — спина</h4>
+              <p>Мастер: Мария Блэк</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="text-align: center; padding: 4rem 0">
+      <div class="container">
+        <h2>Хотите свою работу?</h2>
+        <p style="margin: 1rem 0 2rem; opacity: 0.75">
+          Запишитесь на консультацию и мы обсудим вашу идею
+        </p>
+        <a href="booking.html" class="btn-main">Записаться</a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <div class="logo">TATTOO.STUDIO</div>
+            <p>
+              Создаем искусство на коже с 2024 года. <br />
+              Соблюдаем медицинские стандарты безопасности.
+            </p>
+          </div>
+          <div class="footer-nav">
+            <h4>Навигация</h4>
+            <ul>
+              <li><a href="about.html">О студии</a></li>
+              <li><a href="masters.html">Мастера</a></li>
+              <li><a href="portfolio.html">Портфолио</a></li>
+              <li><a href="prices.html">Стоимость</a></li>
+              <li><a href="training.html">Обучение</a></li>
+              <li><a href="booking.html">Запись</a></li>
+            </ul>
+          </div>
+          <div class="footer-contacts">
+            <h4>Контакты</h4>
+            <p>ул. Профессиональная, 12</p>
+            <p>+7 (999) 000-00-00</p>
+            <p>Ежедневно: 11:00 — 21:00</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Tattoo Studio. Все права защищены.</p>
+          <div class="socials">
+            <a href="#">VK</a>
+            <a href="#">TG</a>
+            <a href="#">INST</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+      function filterPortfolio(master) {
+        const items = document.querySelectorAll(".healed-item");
+        const btns = document.querySelectorAll(".filter-btn");
+        btns.forEach((btn) => btn.classList.remove("active"));
+        event.target.classList.add("active");
+        items.forEach((item) => {
+          if (master === "all" || item.dataset.master === master) {
+            item.style.display = "";
+          } else {
+            item.style.display = "none";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

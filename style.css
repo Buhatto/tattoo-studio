@@ -307,10 +307,231 @@ textarea {
   color: var(--accent);
 }
 
+/* ============================================
+   МОБИЛЬНЫЙ АДАПТИВ
+   ============================================ */
 @media (max-width: 768px) {
+  /* --- Навигация: сетка кнопок --- */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 20px;
+    gap: 14px;
+    position: relative;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .nav-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    width: 100%;
+  }
+
+  /* "Обучение" (5й пункт) растягивается на 2 колонки */
+  .nav-links li:nth-last-child(2) {
+    grid-column: span 2;
+  }
+
+  /* "Записаться" — всегда на всю ширину */
+  .nav-links li:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+    text-align: center;
+    padding: 8px 6px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    font-size: 0.78rem;
+    transition: 0.2s;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.4);
+  }
+
+  /* Кнопка "Записаться" — на всю ширину отдельной строкой */
+  .nav-links li:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .nav-links .btn-outline {
+    background: var(--accent);
+    color: #000;
+    border-color: var(--accent);
+    font-weight: 600;
+    padding: 10px;
+  }
+
+  /* --- Hero --- */
+  .hero {
+    height: auto;
+    min-height: 70vh;
+    padding: 60px 20px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+  }
+
+  .btn-main {
+    padding: 12px 28px;
+    font-size: 0.9rem;
+  }
+
+  /* --- Container --- */
+  .container {
+    padding: 30px 16px;
+  }
+
+  /* --- Мастера --- */
+  .master-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .master-photo {
+    height: 300px;
+  }
+
+  /* --- Портфолио --- */
+  .healed-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .healed-photo {
+    height: 260px;
+  }
+
+  /* --- Форма записи --- */
+  .input-group {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  /* --- Фильтры портфолио --- */
+  .portfolio-filters {
+    gap: 8px !important;
+  }
+
+  .filter-btn {
+    padding: 0.4rem 1rem;
+    font-size: 0.82rem;
+  }
+
+  /* --- Шапка внутренней страницы --- */
+  .page-hero {
+    padding: 1rem 1rem 0.5rem;
+  }
+
+  .page-hero h1 {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  /* --- Футер --- */
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
   .footer-bottom {
     flex-direction: column;
-    gap: 20px;
+    gap: 16px;
     text-align: center;
   }
+}
+
+/* ==============================================
+   ДОПОЛНЕНИЯ К style.css ДЛЯ МНОГОСТРАНИЧНОЙ ВЕРСИИ
+   Вставьте этот код В КОНЕЦ вашего style.css
+   ============================================== */
+
+/* Шапка страницы (вместо hero на внутренних страницах) */
+.page-hero {
+  padding: 4rem 0 2rem;
+  text-align: center;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), transparent);
+}
+
+.page-hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.page-hero .subtitle {
+  font-size: 1.1rem;
+  opacity: 0.65;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Активный пункт навигации */
+.nav-links a.active {
+  color: var(--accent);
+  opacity: 1;
+  text-decoration: none;
+}
+
+/* Логотип как ссылка */
+a.logo {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Кнопки фильтра портфолио */
+.filter-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: inherit;
+  padding: 0.5rem 1.5rem;
+  border-radius: 100px;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.filter-btn.active {
+  background: white;
+  color: black;
+  border-color: white;
+}
+
+/* Карточка цены */
+.price-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: border-color 0.3s ease;
+}
+
+.price-card:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Кнопка в карточке мастера */
+.master-card .btn-main {
+  font-size: 0.85rem;
+  padding: 0.6rem 1.2rem;
 }
